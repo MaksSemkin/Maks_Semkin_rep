@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Player</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./src/video-player.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+        <div class="video-player">
+            <video class="video-player__video" src="http://vjs.zencdn.net/v/oceans.mp4"></video>
+
+            <div class="video-player__controls">
+                <button class="video-player__control video-player__button video-player__play-button material-icons">play_arrow</button>
+
+                <span class="video-player__control video-player__time-label"></span>
+
+                <input type="range" class="video-player__control video-player__time-range">
+
+                <button class="video-player__control video-player__button video-player__volume-button material-icons">volume_up</button>
+
+                <button class="video-player__control video-player__button video-player__fullscreen-button material-icons">fullscreen</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/video-player.js"></script>
+    <script>
+        new VideoPlayer(document.querySelector('.video-player'));
+    </script>
+</body>
+</html>
